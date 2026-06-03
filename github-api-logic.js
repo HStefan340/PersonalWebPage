@@ -17,11 +17,9 @@ async function fetchGitHubProjects(){
 
         const rawData = await response.json();
 
-        let myProjects = rawData.filter(repo => repo.fork === false);
+        allProjects = rawData.filter(repo => repo.fork === false);
 
-        myProjects.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-
-        allProjects = myProjects;
+        allProjects.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
         loadingMessage.classList.add('hidden');
 
