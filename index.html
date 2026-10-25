@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "ro">
+<html lang = "en">
     <head>
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
@@ -8,9 +8,25 @@
         
         <link rel = "stylesheet" href = "portfolio-style.css">
 
+        <script src = "navigation.js" defer></script>
         <script src = "github-api-logic.js" defer></script>
     </head>
     <body>
+        <nav class = "site-nav">
+            <a href = "index.html" class = "nav-brand"> Ștefan Hoțea </a>
+
+            <button type = "button" class = "menu-toggle" aria-label = "Toggle menu" aria-expanded = "false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class = "nav-menu">
+                <li><a href = "index.html" class = "nav-link current">Home</a></li>
+                <li><a href = "#portfolio" class = "nav-link">Projects</a></li>
+                <li><a href = "contact.html" class = "nav-link">Contact</a></li>
+            </ul>
+        </nav>
 
         <div class = "main-container">
             <header class = "profile-section">
@@ -56,7 +72,9 @@
                 <section class = "cv-section">
                     <h3>Experience</h3>
                     <article class = "experience-section">
-                        <h4>No Experience</h4>
+                        <h4>Summer Internship - AUMOVIO</h4>
+                        <p>Observed the testing and validation of automotive electronic systems (ECUs) using CANoe.</p>
+                        <p>July 2026</p>
                     </article>
                 </section>
 
@@ -66,13 +84,13 @@
                         <h4>C# multiplayer chess game </h4>
                         <p>A network-based chess game integrating complex logic and move validation.</p>
 
-                        <h4>CS2Helper - currently in development</h4>
-                        <p>A utility tool currently in development (tactics, smoke lineups, utility mapping).</p>
+                        <h4>ScoreSeer - in development</h4>
+                        <p>Full-stack football score prediction web app built with React, TypeScript, C#/.NET and PostgreSQL.</p>
                     </article>
                 </section>
             </div>
 
-            <section class = "github-portfolio-section">
+            <section id = "portfolio" class = "github-portfolio-section">
                 <div class = "portfolio-header">
                     <h3>GitHub Portfolio</h3>
                     <input type = "text" id = "project-search-input" class = "search-input" placeholder = "Search a project...">
