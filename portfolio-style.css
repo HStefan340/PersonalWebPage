@@ -365,6 +365,14 @@ html{
         width: 100%;
     }
 
+    .github-portfolio-section{
+        padding: 15px;
+    }
+
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
+
     .site-nav{
         padding: 15px;
     }
