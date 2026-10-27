@@ -31,7 +31,7 @@ contactForm.addEventListener('focusout', (event) => {
 contactForm.addEventListener('input', (event) =>{
     if(event.target.classList.contains('invalid')) validateField(event.target);
 
-    const length = contactForm.nextElementSibling.message.value.length;
+    const length = contactForm.elements.message.value.length;
     messageCounter.textContent = `${length} / 1000`;
     messageCounter.classList.toggle('over-limit', length > 1000);
 });
